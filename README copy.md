@@ -1,24 +1,25 @@
 # Project Name
 
-Awesome Books Website
+Leaderboard Website
 
-This is a website that was created as a Microverse project. The website is a book storage site that allows users to add and remove books. The books are stored in the local storage and are available each time the website loads. 
+This ia a leaderboard website that displays scores submitted by different players. It also allows users to submit their scores. All data is preserved using the external Leaderboard API service.
 
 ## Built With
 
 - HTML
+- CSS
 - JavaScript
+- Webpack
 
 ## Getting Started
 
-To get a local copy up and running follow these simple example steps. You can either download the zip file, or clone the repository from [here](https://github.com/the-catalystmc/awesome-books/tree/build-website). After you can open the index.html file to load the website locally.
+To get a local copy up and running follow these simple example steps. You can either download the zip file, or clone the repository from [here](https://github.com/the-catalystmc/leaderboard). 
+ Once the repository is available locally you can use:
+`npm install` to install the packages
+`npm run start` to run the server on local server 
 
-## Authors
-👤 **Arthur Borges**
-- GitHub: [@arthuborgesdev](https://github.com/arthurborgesdev)
-- Twitter: [@arthurmoises](https://twitter.com/arthurmoises)
-- LinkedIn: [Arthur Borges](https://linkedin.com/in/arthurmoises) 
 
+## Author
 👤 **Rhyine Stewart**
 
 - GitHub: [@githubhandle](https://github.com/the-catalyst-mc)
@@ -30,7 +31,7 @@ To get a local copy up and running follow these simple example steps. You can ei
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/the-catalystmc/church-conference-capstone/issues).
+Feel free to check the [issues page](https://github.com/the-catalystmc/leaderboard/issues).
 
 ## Show your support
 
