@@ -1,15 +1,21 @@
-import _ from 'lodash';
 import './style.css';
 
-function component() {
-    const element = document.createElement('div');
-  
-    // Lodash, currently included via a script, is required for this line to work
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.classList.add('hello');
-  
-    return element;
-  }
-  
-  document.body.appendChild(component());
+const leaderboard = document.querySelector('.board__content');
+const form = document.querySelector('.form');
+const submitBtn = document.querySelector('.form__submit');
+
+const updateScore = () => {
+  const name = form.name.value;
+  const score = form.score.value;
+  const newScore = document.createElement('li');
+  newScore.classList.add('board__item');
+  newScore.innerHTML = `${name}: ${score}`;
+  leaderboard.appendChild(newScore);
+  form.name.value = '';
+  form.score.value = '';
+};
+
+submitBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  updateScore();
+});
