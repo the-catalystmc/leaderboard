@@ -8,8 +8,38 @@ let asyncRequest = async () => {
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
-          },
+        },
     })
     const token = await game.json();
     console.log(token);
 }
+
+
+class APIUpdate {
+//-----FUNCTION THAT POSTS NEW SCORES-----
+setScores = async () => {
+    let score = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zvJVRzCNXVWayjLcoONN/scores', {
+        method: 'POST',
+        body: JSON.stringify({
+            "user": "John Doe",
+            "score": 42
+            // 'user': 'Ron',
+            // 'score': 99
+        })
+    })
+    const board = await score.json();
+    console.log(board);
+    return board;
+}
+
+getScores = async () => {
+    let scores = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zvJVRzCNXVWayjLcoONN/scores');
+    const scoreboard = await scores.json();
+    console.log(scoreboard);
+    return scoreboard;
+}
+
+}
+
+const apiUpdate = new APIUpdate();
+export { apiUpdate as default };
