@@ -5,6 +5,8 @@
 }
 
 body {
+  color: white;
+  background-color: #141850;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -16,8 +18,12 @@ body {
 }
 
 .container {
+  background-color: #303179;
   display: flex;
   align-self: center;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 2px 2px 5px;
 }
 
 .board {
@@ -36,19 +42,25 @@ body {
 
 .board__refresh {
   box-shadow: 1px 1px 1px;
+  border-radius: 6px;
+  padding: 0 3px;
+  background: #ed7966;
+  color: white;
 }
 
 .board__content {
   border: 2px black solid;
   list-style: none;
+  border-radius: 12px;
+
 }
 
 .board__item {
-  padding: 0 10px;
+  padding: 3px 10px;
 }
 
 .board__item:nth-of-type(2n + 2) {
-  background-color: lightgray;
+  background-color: #ed7966;
 }
 
 .form {
@@ -68,6 +80,9 @@ body {
   width: fit-content;
   align-self: flex-end;
   box-shadow: 1px 1px 1px;
+  border-radius: 6px;
+  padding: 2px 3px;
+  background: #fcde67;
 }
 
 @media only screen and (max-width: 500px) {
