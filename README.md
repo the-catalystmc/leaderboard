@@ -9,10 +9,14 @@ This is a leaderboard website that displays scores submitted by different player
 
 ## Built With
 
-- HTML
-- CSS
-- JavaScript
-- Webpack
+- ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+- ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
+- ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+- ![Webpack](https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black)
+
+## Live Demo
+You can see my page live here: 
+[Check it out!](https://the-catalystmc.github.io/leaderboard/)
 
 ## Getting Started
 
