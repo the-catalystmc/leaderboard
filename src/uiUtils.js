@@ -1,41 +1,40 @@
-
 import apiUpdate from './api';
 
 class UIUtils {
-    leaderboard = document.querySelector('.board__content');
-    form = document.querySelector('.form');
+  leaderboard = document.querySelector('.board__content');
 
-    newScore = () => {
-        const name = this.form.name.value;
-        const score = this.form.score.value;
-        apiUpdate.setScores(name, score);
-        this.form.name.value = '';
-        this.form.score.value = '';
-    };
+  form = document.querySelector('.form');
 
-    createScore = (data) => {
-        const name = data.user;
-        const score = data.score;
-        const newScore = document.createElement('li');
-        newScore.classList.add('board__item');
-        newScore.innerHTML = `${name}: ${score}`;
-        this.leaderboard.appendChild(newScore);
-    }
+  newScore = () => {
+    const name = this.form.name.value;
+    const score = this.form.score.value;
+    apiUpdate.setScores(name, score);
+    this.form.name.value = '';
+    this.form.score.value = '';
+  };
 
-    loadScores = async () => {
-        let scoreData = [];
-        scoreData = await apiUpdate.getScores();
-        this.sortScores(scoreData);
-        scoreData.forEach(score => {
-            this.createScore(score)
-        });
-    }
+  createScore = (data) => {
+    const { user, score } = data;
+    const newScore = document.createElement('li');
+    newScore.classList.add('board__item');
+    newScore.innerHTML = `${user}: ${score}`;
+    this.leaderboard.appendChild(newScore);
+  }
 
-    clearBoard = () => {
-        this.leaderboard.innerHTML = '';
-    }
+  loadScores = async () => {
+    let scoreData = [];
+    scoreData = await apiUpdate.getScores();
+    this.sortScores(scoreData);
+    scoreData.forEach((score) => {
+      this.createScore(score);
+    });
+  }
 
-    sortScores = (array) => array.sort((a, b) => b.score - a.score);
+  clearBoard = () => {
+    this.leaderboard.innerHTML = '';
+  }
+
+  sortScores = (array) => array.sort((a, b) => b.score - a.score);
 }
 
 const uiUtils = new UIUtils();
