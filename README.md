@@ -4,6 +4,9 @@ Leaderboard Website
 
 This is a leaderboard website that displays scores submitted by different players. It also allows users to submit their scores. All data is preserved using the external Leaderboard API service.
 
+# Screenshots
+![screenshot](./images.jpeg)
+
 ## Built With
 
 - HTML
