@@ -25,10 +25,17 @@ class UIUtils {
     loadScores = async () => {
         let scoreData = [];
         scoreData = await apiUpdate.getScores();
+        this.sortScores(scoreData);
         scoreData.forEach(score => {
             this.createScore(score)
         });
     }
+
+    clearBoard = () => {
+        this.leaderboard.innerHTML = '';
+    }
+
+    sortScores = (array) => array.sort((a, b) => b.score - a.score);
 }
 
 const uiUtils = new UIUtils();

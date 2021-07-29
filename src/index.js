@@ -13,5 +13,6 @@ submitBtn.addEventListener('click', (e) => {
 });
 
 refreshBtn.addEventListener('click', () => {
+  uiUtils.clearBoard();
   uiUtils.loadScores();
 });

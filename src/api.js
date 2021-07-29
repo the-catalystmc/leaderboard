@@ -1,7 +1,7 @@
 
 //-----FUNCTION THAT CREATES GAME ID-----
-let asyncRequest = async () => {
-    let game = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
+const asyncRequest = async () => {
+    const game = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
         method: 'POST',
         body: JSON.stringify({
             'name': 'Trializma'
@@ -18,7 +18,7 @@ let asyncRequest = async () => {
 class APIUpdate {
 //-----FUNCTION THAT POSTS NEW SCORES-----
 setScores = async (name, points) => {
-    let score = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zvJVRzCNXVWayjLcoONN/scores', {
+    let score = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/uGidfxD7uXav77djQKgn/scores', {
         method: 'POST',
         body: JSON.stringify({
             user: name,
@@ -34,7 +34,7 @@ setScores = async (name, points) => {
 }
 
 getScores = async () => {
-    let scores = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zvJVRzCNXVWayjLcoONN/scores');
+    let scores = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/uGidfxD7uXav77djQKgn/scores');
     const scoreboard = await scores.json();
     return scoreboard.result;
 }
