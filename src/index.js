@@ -1,21 +1,15 @@
 import './style.css';
+import uiUtils from './uiUtils';
 
-const leaderboard = document.querySelector('.board__content');
-const form = document.querySelector('.form');
 const submitBtn = document.querySelector('.form__submit');
-
-const updateScore = () => {
-  const name = form.name.value;
-  const score = form.score.value;
-  const newScore = document.createElement('li');
-  newScore.classList.add('board__item');
-  newScore.innerHTML = `${name}: ${score}`;
-  leaderboard.appendChild(newScore);
-  form.name.value = '';
-  form.score.value = '';
-};
+const refreshBtn = document.querySelector('.board__refresh');
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  updateScore();
+  uiUtils.newScore();
+});
+
+refreshBtn.addEventListener('click', () => {
+  uiUtils.clearBoard();
+  uiUtils.loadScores();
 });
