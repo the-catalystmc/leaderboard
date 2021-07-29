@@ -61,6 +61,7 @@ body {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }
@@ -70,7 +71,6 @@ body {
   border: 2px #f5cac2 solid;
   list-style: none;
   border-radius: 12px;
-
 }
 
 .board__item {

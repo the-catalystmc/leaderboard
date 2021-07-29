@@ -17,4 +17,4 @@ refreshBtn.addEventListener('click', () => {
 window.addEventListener('load', () => {
   uiUtils.clearBoard();
   uiUtils.loadScores();
-})
+});
