@@ -36,8 +36,7 @@ setScores = async (name, points) => {
 getScores = async () => {
     let scores = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zvJVRzCNXVWayjLcoONN/scores');
     const scoreboard = await scores.json();
-    console.log(scoreboard);
-    return scoreboard;
+    return scoreboard.result;
 }
 
 }

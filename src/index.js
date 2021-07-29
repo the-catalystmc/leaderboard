@@ -9,10 +9,9 @@ const form = document.querySelector('.form');
 
 submitBtn.addEventListener('click', (e) => {
   e.preventDefault();
-  apiUpdate.setScores(form.name.value, form.score.value);
-  uiUtils.updateScore();
+  uiUtils.newScore();
 });
 
 refreshBtn.addEventListener('click', () => {
-  apiUpdate.getScores();
+  uiUtils.loadScores();
 });
