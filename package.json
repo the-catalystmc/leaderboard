@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/the-catalystmc/webpack-boilerplate/issues"
   },
-  "homepage": "https://github.com/the-catalystmc/webpack-boilerplate#readme",
+  "homepage": "https://the-catalystmc.github.io/leaderboard/",
   "devDependencies": {
     "css-loader": "^5.2.7",
     "html-webpack-plugin": "^5.3.2",
