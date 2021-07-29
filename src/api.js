@@ -4,7 +4,7 @@ let asyncRequest = async () => {
     let game = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/', {
         method: 'POST',
         body: JSON.stringify({
-            'name': 'trial game'
+            'name': 'Trializma'
         }),
         headers: {
             'Content-type': 'application/json; charset=UTF-8',
@@ -17,15 +17,16 @@ let asyncRequest = async () => {
 
 class APIUpdate {
 //-----FUNCTION THAT POSTS NEW SCORES-----
-setScores = async () => {
+setScores = async (name, points) => {
     let score = await fetch('https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/zvJVRzCNXVWayjLcoONN/scores', {
         method: 'POST',
         body: JSON.stringify({
-            "user": "John Doe",
-            "score": 42
-            // 'user': 'Ron',
-            // 'score': 99
-        })
+            user: name,
+            score: points,
+        }),
+        headers: {
+            'Content-type': 'application/json; charset=UTF-8',
+        },
     })
     const board = await score.json();
     console.log(board);

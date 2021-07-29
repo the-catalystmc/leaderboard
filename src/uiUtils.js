@@ -1,4 +1,6 @@
 
+import apiUpdate from './api';
+
 class UIUtils {
     leaderboard = document.querySelector('.board__content');
     form = document.querySelector('.form');
